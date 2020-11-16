@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR_Calculator</title>
+</head>
+<body>
+    <div class="menubar">
+        <h1>PROJECT(RE)TIRE</h1>
+        <ul>
+          <li><a href="/home">Home</a></li>
+        </ul>
+    </div>
+    <div class="title">
+        <h2>โปรแกรมคำนวณค่า BMR</h2>
+    </div>
+    <div class="details">
+        <h4>BMR ย่อมาจาก Basal Metabolic Rate หรือเราสามารถเรียกได้ว่าเป็นอัตราการเผาผลาญพลังงานในแต่ละวัน 
+        โดยค่าพลังงานนี้ร่างกายจะใช้ในการขับเคลื่อนระบบเเละควบคุมอวัยวะต่างๆ ในร่างกาย</h4>
+    </div>
+    <div class="input_zone">
+        <form action="/bmr" method="POST">
+            Weight: <input name="kg_bmr_input" size="30px"/><br>
+            Height: <input name="height_bmr_input" size="30px"/><br>
+            Age: <input name="age_bmr_input" size="30px"/><br>
+            <input type="radio" name="sex_bmr" value="male" checked="checked"> ชาย
+            <input type="radio" name="sex_bmr" value="female"> หญิง
+            <input type="submit" value="Analysis">
+        </form>
+    </div>
+    <div class="ans">
+        <h2>ค่า BMR ของคุณคือ: {{ bmr_ans }}</h2>
+    </div>
+</body>
+</html>
