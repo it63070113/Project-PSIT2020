@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Boys</title>
+</head>
+<body>
+    <h1>Project PSIT</h1>
+    <br>
+    <h2 align="center">About</h2>
+    <h3 align="center">ปัจจุบันเริ่มมีการสนใจปัญหาของด้านสุขภาพมากยิ่งขึ้น จึงหาวิธีที่จะทำให้สุขภาพร่างกายแข็งแรงไม่ว่าจะเป็นการออกกำลังกาย
+        หรือแม้กระทั่งการกินอาหารเพื่อที่จะให้ร่างกายได้รับสารอาหารที่ครบถ้วนเพียงพอต่อการใช้ในชีวิตประจำวัน
+        จึงได้มีการคำนวณค่า BMIเพื่อประกอบการตัดสินใจในการเลือกอาหารและออกกำลังกาย</h3>
+    <center><h1>BMI</h1>
+    <p1><b>BMI (Body Mass Index)</b> หรือ การหาค่าดัชนีมวลร่างกาย เป็นมาตราการใช้ประเมินภาวะมวลร่างกายของผู้ที่มีอายุ20ปีขึ้นไป</p1>
+    <form action="/bmi" method="POST">
+        <center>Weight: <input name="kg_bmi"/><br><br>
+        Height: <input name="high"/><br><br>
+        <input type="submit" value="Analysis"></center>
+    </form>
+    <h2>ค่า BMI ของคุณคือ : {{ bmi }} </h2> 
+    <br>{{ txt }}<br>
+    <center><h1>BMR (Kcal)</h1>
+    <p2><b>BMR (Basal Metabolic Rate)</b> หรือ อัตราการเผาผลาญพลังงานของร่างกาย เป็นเครื่องมือการวัดอัตราการเผาผลาญพลังงานของร่างกายในแต่ละวัน 
+        ซึ่งไม่เกี่ยวข้องกับการทำกิจกรรมในแต่ละวัน</p2></center>
+    <form action="/bmr" method="POST">
+        <center>Weight: <input name="kg_bmr"/><br><br>
+        Height: <input name="high_bmr"/><br><br>
+        Age: <input name="age_bmr"/><br><br>
+        <input type="radio" name="sex_bmr" value="male" checked="checked"> ชาย
+        <input type="radio" name="sex_bmr" value="female"> หญิง
+        <br>
+        <input type="submit" value="Analysis" ></center>
+    </form>
+    <h1>ค่า BMR ของคุณ คือ : {{ bmr }}</h1>
+</body>
+</html>
