@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR_Calculator</title>
+</head>
+<body>
+    <div class="menubar">
+        <h1>PROJECT(RE)TIRE</h1>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/">Credit</a></li>
+        </ul>
+      </div>
+    <h2>โปรแกรมคำนวณค่า BMR</h2>
+    <h4>BMR ย่อมาจาก Basal Metabolic Rate หรือเราสามารถเรียกได้ว่าเป็นอัตราการเผาผลาญพลังงานในแต่ละวัน 
+        โดยค่าพลังงานนี้ร่างกายจะใช้ในการขับเคลื่อนระบบเเละควบคุมอวัยวะต่างๆ ในร่างกาย
+    </h4>
+    <form action="/bmr" method="POST">
+        Weight: <input name="kg_bmr_input" size="30px"/><br>
+        Height: <input name="height_bmr_input" size="30px"/><br>
+        Age: <input name="age_bmr_input" size="30px"/><br>
+        <input type="radio" name="sex_bmr" value="male" checked="checked"> ชาย
+        <input type="radio" name="sex_bmr" value="female"> หญิง
+        <br>
+        <input type="submit" value="Analysis">
+    </form>
+    <h2>ค่า BMR ของคุณคือ : {{ bmr_ans }} </h2> 
+    <div class="credit">
+        <h3>project(re)tire members</h3>
+        <div class="member">
+          <div class="number1">
+            <h6>นายปรัตถกร สิงห์วิเศษ (ดรอป)</h6>
+            <p3>63070101</p3>
+          </div>
+          <div class="number2">
+            <h6>นายพฤฒพงศ์ สุขเจริญ</h6>
+            <p3>63070113</p3>
+          </div>
+          <div class="number3">
+            <h6>นายพัชรพล ศาศวัตเตชะ</h6>
+            <p3>63070115</p3>
+          </div>
+          <div class="number4">
+            <h6>นายภูฟ้า รุจิภาสวัฒน์</h6>
+            <p3>63070137</p3>
+          </div>
+          <div class="number5">
+            <h6>นายอริยพล อูนากูล</h6>
+            <p3>63070186</p3>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
