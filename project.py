@@ -7,12 +7,15 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return render_template('homepage.html')
+
 @app.route('/home')
 def main():
     return render_template('homepage.html')
+
 @app.route('/bmi')
 def mainn():
     return render_template('bmi_cal.html')
+
 @app.route('/bmr')
 def mainnn():
     return render_template('bmr_cal.html')
@@ -52,9 +55,10 @@ def bmr_cal():
     if kg_bmr.isdigit() and height_bmr.isdigit():
         if sex_from_html == "male":
             bmr_ans = int(66 + (13.7*float(kg_bmr)) + (5*float(height_bmr)) - (6.8 * float(age_bmr)))
+            return render_template('bmr_cal.html', bmr_ans=bmr_ans)
         elif sex_from_html == "female":
             bmr_ans = int(665 + (9.6 * float(kg_bmr)) + (1.8 * float(height_bmr)) - (4.7 * float(age_bmr)))
-        return render_template('bmr_cal.html', bmr_ans=bmr_ans)
+            return render_template('bmr_cal.html', bmr_ans=bmr_ans)
     else:
         return render_template('bmr_cal.html', bmr_ans=bmr_ans)
 
