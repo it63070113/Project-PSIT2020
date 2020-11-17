@@ -26,20 +26,35 @@ def bmi_cal():
     tips = ""
     bmi_ans = "กรุณากรอกข้อมูลให้ถูกต้อง"
     kg_bmi = request.form['kg_bmi_input']
-    height_bmr = request.form['height_bmi_input']
-    if kg_bmi.isdigit() and height_bmr.isdigit():
-        bmi_ans = round(float(kg_bmi) / ((float(height_bmr)/100) ** 2), 2)
+    height_bmi = request.form['height_bmi_input']
+    if kg_bmi.isdigit() and height_bmi.isdigit():
+        bmi_ans = round(float(kg_bmi) / ((float(height_bmi)/100) ** 2), 2)
         if bmi_ans < 18.5:
+            result = "คุณต้องเพิ่มค่าBMIอีก"+"%.2f" %(abs(bmi_ans-18.5))+"จึงจะมีค่า BMI ในระดับปกติ"
+            kg_ans = float(abs(abs(18.5*((float(height_bmi)/100)**2))-float(kg_bmi)))
+            secret = "***เคล็ดไม่ลับ คุณต้องเพื่มน้ำหนักอีก" +"%.2f" %(kg_ans)+"เพื่อให้ค่า BMI อยู่ในระดับปกติ"
             tips = "น้ำหนักน้อย/ผอม"
         elif 18.5 <= bmi_ans <= 22.9:
+            result = "ค่า BMI ของคุณอยู่ในระดับปกติแล้ว"
+            kg_ans = float(abs(abs(22.9*((float(height_bmi)/100)**2))-float(kg_bmi)))
+            secret = "***เคล็ดไม่ลับ รักษาค่านี้ไว้ให้คงอยู่ตลอดนะะ"
             tips = "ปกติ"
         elif 23 <= bmi_ans <= 24.9:
+            result = "คุณต้องลดค่าBMIอีก"+"%.2f" %(abs(bmi_ans-22.9))+"จึงจะมีค่า BMI ในระดับปกติ"
+            kg_ans = float(abs(abs(22.9*((float(height_bmi)/100)**2))-float(kg_bmi)))
+            secret = "***เคล็ดไม่ลับ คุณต้องลดน้ำหนักอีก" +"%.2f" %(kg_ans)+"เพื่อให้ค่า BMI อยู่ในระดับปกติ"
             tips = "ท้วม/โรคอ้วนระดับ 1"
         elif 25 <= bmi_ans <= 29.9:
+            result = "คุณต้องลดค่าBMIอีก"+"%.2f" %(abs(bmi_ans-22.9))+"จึงจะมีค่า BMI ในระดับปกติ"
+            kg_ans = float(abs(abs(22.9*((float(height_bmi)/100)**2))-float(kg_bmi)))
+            secret = "***เคล็ดไม่ลับ คุณต้องลดน้ำหนักอีก" +"%.2f" %(kg_ans)+"เพื่อให้ค่า BMI อยู่ในระดับปกติ"
             tips = "ท้วม/โรคอ้วนระดับ 2"
         else:
+            result = "คุณต้องลดค่าBMIอีก"+"%.2f" %(abs(bmi_ans-22.9))+"จึงจะมีค่า BMI ในระดับปกติ"
+            kg_ans = float(abs(abs(22.9*((float(height_bmi)/100)**2))-float(kg_bmi)))
+            secret = "***เคล็ดไม่ลับ คุณต้องลดน้ำหนักอีก" +"%.2f" %(kg_ans)+"เพื่อให้ค่า BMI อยู่ในระดับปกติ"
             tips = "ท้วม/โรคอ้วนระดับ 3"
-        return render_template('bmi_cal.html', bmi_ans=bmi_ans, tips=tips)
+        return render_template('bmi_cal.html', bmi_ans=bmi_ans, tips=tips, result=result, secret=secret)
     else:
         return render_template('bmi_cal.html', bmi_ans=bmi_ans)
 
