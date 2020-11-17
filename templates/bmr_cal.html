@@ -10,6 +10,8 @@
         <h1>PROJECT(RE)TIRE</h1>
         <ul>
           <li><a href="/home">Home</a></li>
+          <li><a href="/home#healthanddiet">Health & Diet</a></li>
+          <li><a href="/home#members">Members</a></li>
         </ul>
     </div>
     <div class="title">
@@ -30,7 +32,10 @@
         </form>
     </div>
     <div class="ans">
-        <h2>ค่า BMR ของคุณคือ: {{ bmr_ans }}</h2>
+        <h2>ค่า BMR (Kcal) ของคุณคือ<br>{{ bmr_ans }}</h2>
     </div>
+    <div class="caculator">
+        <a href="/bmi">BMI เครื่องคำนวณดัชนีมวลร่างกาย</a>
+      </div>
 </body>
 </html>
