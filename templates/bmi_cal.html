@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>BMI_Calculator</title>
 </head>
 <body>
@@ -25,15 +31,19 @@
         </h4>
     </div>
     <div class="input_zone">
+    <div class="container">
     <form action="/bmi" method="POST">
-        Weight: <input name="kg_bmi_input" size="30px"/><br>
-        Height: <input name="height_bmi_input" size="30px"/><br>
-        <input type="submit" value="Analysis">
+        <label for="Weight">Weight :</label>
+            <input name="kg_bmi_input" class="form-control" placeholder="Enter number"  size="30px"/><br>
+        <label for="Height">Height (cm) :</label>
+            <input name="height_bmi_input" class="form-control" placeholder="Enter number"  size="30px"/><br>
+        <input type="submit" class="btn btn-outline-success" value="Analysis">
+    </div>
     </form>
     </div>
-    <div class="ans">
+    <div class="container">
+        <br>
         <h2>ค่า BMI ของคุณคือ<br>{{ bmi_ans }} </h2> 
-    </div>
     <div class="tips">
         <br>{{ tips }}<br>{{ result }}<br>{{ secret }}
 
