@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMR_Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="menubar">
@@ -21,21 +25,28 @@
         <h4>BMR ย่อมาจาก Basal Metabolic Rate หรือเราสามารถเรียกได้ว่าเป็นอัตราการเผาผลาญพลังงานในแต่ละวัน 
         โดยค่าพลังงานนี้ร่างกายจะใช้ในการขับเคลื่อนระบบเเละควบคุมอวัยวะต่างๆ ในร่างกาย</h4>
     </div>
+    <div class="container">
     <div class="input_zone">
         <form action="/bmr" method="POST">
-            Weight: <input name="kg_bmr_input" size="30px"/><br>
-            Height: <input name="height_bmr_input" size="30px"/><br>
-            Age: <input name="age_bmr_input" size="30px"/><br>
+            <label for="Weight">Weight :</label>
+            <input name="kg_bmr_input" class="form-control" size="30px"/><br>
+            <label for="Height">Height :</label>
+            <input name="height_bmr_input" class="form-control" size="30px"/><br>
+            <label for="Age">Age :</label>
+            <input name="age_bmr_input" class="form-control" size="30px"/><br>
             <input type="radio" name="sex_bmr" value="male" checked="checked"> ชาย
             <input type="radio" name="sex_bmr" value="female"> หญิง
-            <input type="submit" value="Analysis">
+            <br><br><input type="submit" class="btn btn-outline-success" value="Analysis">
         </form>
     </div>
+    </div>
+    <div class="container">
     <div class="ans">
         <h2>ค่า BMR (Kcal) ของคุณคือ<br>{{ bmr_ans }}</h2>
     </div>
     <div class="caculator">
         <a href="/bmi">BMI เครื่องคำนวณดัชนีมวลร่างกาย</a>
       </div>
+    </div>
 </body>
 </html>
