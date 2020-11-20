@@ -4,6 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthy Boys</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    window.onload = function () {
+    
+    var options = {
+      animationEnabled: true,
+      theme: "light2",
+      title:{
+        text: "ผู้ป่วยเบาหวาน ความดันโลหิตสูงที่ได้รับการประเมินโอกาสเสี่ยงต่อโรคหัวใจและหลอดเลือดในปี 2013-2019"
+      },
+      axisX:{
+        valueFormatString: "YYYY"
+      },
+      axisY: {
+        title: "จำนวนผู้ป่วย",
+        suffix: " คน",
+        minimum: 0
+      },
+      toolTip:{
+        shared:true
+      },  
+      legend:{
+        cursor:"pointer",
+        verticalAlign: "bottom",
+        horizontalAlign: "left",
+        dockInsidePlotArea: true,
+        itemclick: toogleDataSeries
+      },
+      data: [{
+        type: "line",
+        showInLegend: true,
+        name: "ผู้ป่วยเบาหวาน ความดันโลหิตสูง",
+        markerType: "square",
+        color: "#F08080",
+        yValueFormatString: "#,##0 คน",
+        dataPoints: [
+          { label: 2014, y: 1552853 },
+          { label: 2015, y: 1909401 },
+          { label: 2016, y: 2136152 },
+          { label: 2017, y: 2366988 },
+          { label: 2018, y: 2428196 },
+          { label: 2019, y: 2463306 },
+        ]
+      },
+      {
+        type: "line",
+        showInLegend: true,
+        name: "ผู้ป่วยเบาหวาน ความดันโลหิตสูงที่ขึ้นทะเบียนได้รับการประเมินโอกาสเสี่ยงต่อโรคหัวใจและหลอดเลือด",
+        lineDashType: "dash",
+        yValueFormatString: "#,##0 คน",
+        dataPoints: [
+          { label: 2014, y: 526152 },
+          { label: 2015, y: 374576 }, 
+          { label: 2016, y: 894994 },
+          { label: 2017, y: 1933386 },
+          { label: 2018, y: 2082596 },
+          { label: 2019, y: 2174829 },
+        ]
+      }]
+    };
+    $("#chartContainer").CanvasJSChart(options);
+    
+    function toogleDataSeries(e){
+      if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+        e.dataSeries.visible = false;
+      } else{
+        e.dataSeries.visible = true;
+      }
+      e.chart.render();
+    }
+    
+    }
+    </script>
 </head>
 <body>
   <div class="menubar">
@@ -14,6 +90,7 @@
       <li><a href="#members">Members</a></li>
     </ul>
   </div>
+  <div class="container">
   <div class="LOGO">
     <h2>HEALTHY BOYS</h2>
   <div class="purpose">
@@ -26,20 +103,31 @@
     </div>
   </div>
   </div>
+  </div>
+  <div class="graphic">
+  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</div>
+  <div class="container">
   <div class="body">
+    <div class="container">
     <div class="caculator">
-      <a href="/bmi">BMI เครื่องคำนวณดัชนีมวลร่างกาย</a>
-      <a href="/bmr">BMR เครื่องคำนวณการเผาผลาญพลังงานของร่างกาย</a>
+      <a class="btn btn-primary" target="_blank" href="/bmi">BMI เครื่องคำนวณดัชนีมวลร่างกาย</a>
+      <a class="btn btn-primary" target="_blank" href="/bmr">BMR เครื่องคำนวณการเผาผลาญพลังงานของร่างกาย</a>
     </div>
+  </div>
     <div class="news">
       <h3>Health & Diet</h3>
       <div class="linknews" id="healthanddiet">
-      <a class="btn btn-primary" target="_blank" href="http://www.facebook.com">เล่นโซเชียลยังไงให้หนุ่มตรึมมม</a>
-      <a class="btn btn-primary" target="_blank" href="http://www.google.com">อยากดูแลสุขภาพ ต้องค้นว่าอะไรรร</a>
-      <a class="btn btn-primary" target="_blank" href="http://www.instagram.com">แต่งรูปยังไง ให้ดูผอมมมมม</a>
+      <a href="http://www.facebook.com">เล่นโซเชียลยังไงให้หนุ่มตรึมมม</a>
+      <a href="http://www.google.com">อยากดูแลสุขภาพ ต้องค้นว่าอะไรรร</a>
+      <a href="http://www.instagram.com">แต่งรูปยังไง ให้ดูผอมมมมม</a>
       </div>
     </div>
   </div>
+</div>
+<div class="container">
   <div class="credit">
     <h3>project(re)tire members</h3>
     <div class="member" id="members">
@@ -65,7 +153,9 @@
       </div>
     </div>
   </div>
+  </div>
 
+  
   
 </body>
 </html>
