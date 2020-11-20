@@ -34,9 +34,9 @@
     <div class="container">
     <form action="/bmi" method="POST">
         <label for="Weight">Weight :</label>
-            <input name="kg_bmi_input" class="form-control" placeholder="Enter number"  size="30px"/><br>
+            <input name="kg_bmi_input" class="form-control" size="30px"/><br>
         <label for="Height">Height (cm) :</label>
-            <input name="height_bmi_input" class="form-control" placeholder="Enter number"  size="30px"/><br>
+            <input name="height_bmi_input" class="form-control" size="30px"/><br>
         <input type="submit" class="btn btn-outline-success" value="Analysis">
     </div>
     </form>
@@ -47,6 +47,42 @@
     <div class="tips">
         <br>{{ tips }}<br>{{ result }}<br>{{ secret }}
 
+    </div>
+    <div class="col-618">
+        <table class="bmi-table" id="bmi-result-table">
+            <tbody>
+                <tr class="">
+                    <th class="first"><strong>BMI kg/m<sup>2</sup></strong></th>
+                    <th><strong>อยู่ในเกณท์</strong></th>
+                    <th class="last"><strong>ภาวะเสี่ยงต่อโรค</strong></th>
+                </tr>
+                <tr class="odd">
+                    <td class="first"><span>น้อยกว่า 18.5 </span></td>
+                    <td><span>น้ำหนักน้อย / ผอม</span></td>
+                    <td class="last"><span>มากกว่าคนปกติ</span></td>
+                </tr>
+                <tr class="">
+                    <td class="first"><span>ระหว่าง 18.50 - 22.9 </span></td>
+                    <td><span>ปกติ (สุขภาพดี)</span></td>						
+                    <td class="last"><span>เท่าคนปกติ</span></td>
+                </tr>
+                <tr class="odd">
+                    <td class="first"><span>ระหว่าง 23 - 24.9 </span></td>
+                    <td><span>ท้วม / โรคอ้วนระดับ 1</span></td>	
+                    <td class="last"><span>อันตรายระดับ 1</span></td>					
+                </tr>
+                <tr class="">
+                    <td class="first"><span>ระหว่าง 25 - 29.9 </span></td>
+                    <td><span>อ้วน / โรคอ้วนระดับ 2</span></td>
+                    <td class="last"><span>อันตรายระดับ 2</span></td>
+                </tr>
+                <tr class="odd">
+                    <td class="first"><span>มากกว่า 30</span></td>
+                    <td><span>อ้วนมาก / โรคอ้วนระดับ 3</span></td>	
+                    <td class="last"><span>อันตรายระดับ 3</span></td>					
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="caculator">
         <a href="/bmr">BMR เครื่องคำนวณการเผาผลาญพลังงานของร่างกาย</a>
