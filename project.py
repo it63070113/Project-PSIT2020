@@ -70,11 +70,11 @@ def bmr_cal():
     if kg_bmr.isdigit() and height_bmr.isdigit():
         if sex_from_html == "male":
             bmr_ans = str(int(66 + (13.7*float(kg_bmr)) + (5*float(height_bmr)) - (6.8 * float(age_bmr))))+" Kcal"
-            ans = "หมายความว่าในหนึ่งวัน ร่างกายจะเผาผลาญพลังงานทั้งหมด "+str(bmr_ans)+" Kcal (ไม่รวมกิจกรรมที่ทำในวันนั้น)"
+            ans = "หมายความว่าในหนึ่งวัน ร่างกายจะเผาผลาญพลังงานทั้งหมด "+str(bmr_ans)+" (ไม่รวมกิจกรรมที่ทำในวันนั้น)"
             return render_template('bmr_cal.html', bmr_ans=bmr_ans, ans=ans)
         elif sex_from_html == "female":
             bmr_ans = str(int(665 + (9.6 * float(kg_bmr)) + (1.8 * float(height_bmr)) - (4.7 * float(age_bmr))))+" Kcal"
-            ans = "หมายความว่าในหนึ่งวัน ร่างกายจะเผาผลาญพลังงานทั้งหมด "+str(bmr_ans)+" Kcal (ไม่รวมกิจกรรมที่ทำในวันนั้น)"
+            ans = "หมายความว่าในหนึ่งวัน ร่างกายจะเผาผลาญพลังงานทั้งหมด "+str(bmr_ans)+" (ไม่รวมกิจกรรมที่ทำในวันนั้น)"
             return render_template('bmr_cal.html', bmr_ans=bmr_ans, ans=ans)
     else:
         return render_template('bmr_cal.html', bmr_ans=bmr_ans, ans=ans)
