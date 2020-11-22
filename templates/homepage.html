@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Boys</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csS/style_homepage.css">
+    <title>Healthy Boys</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -117,34 +120,29 @@
 
 <body>
     <div class="menubar">
-        <h1>PROJECT(RE)TIRE</h1>
-        <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="#healthanddiet">Health & Diet</a></li>
-            <li><a href="#members">Members</a></li>
-        </ul>
+        <a href="#" class="home">PSIT Project</a>
+            <a href="/home" class="first">Home</a>
+            <a href="/home#healthanddiet" class="second">Health & Diet</a>
+            <a href="/home#members" class="third">Members</a>
     </div>
-    <div class="container">
-        <div class="LOGO">
-            <h2>HEALTHY BOYS</h2>
+            <div class="brand"></div>
             <div class="purpose">
-                <h3>จุดประสงค์</h3>
-                <div class="purpose-body">
-                    <p1>ปัจจุบันทั้งเด็กและผู้ใหญ่ส่วนมากมักจะมีปัญหาในเรื่องของสุขภาพ ไม่ว่าจะมาจากการใช้ชีวิตประจำวันหรือการบริโภคอาหารให้ถูกต้องตรงตามหลักโภชนาการ สิ่งเหล่านี้ล้วนแต่จะทำให้เกิดผลกระทบกับสุขภาพในทั้งด้านดีและไม่ดี ที่อาจเห็นผลกระทบในเร็ววันหรืออนาคตก็ได้
-                        ซึ่งก็ต้องขึ้นอยู่กับการใช้ชีวิตประจำวันและการบริโภคของแต่ละคน ดังนั้นพวกเราจึงได้ศึกษาเกี่ยวกับเรื่องสุขภาพแล้วนำมารวบรวมบนเว็บไซต์แห่งนี้ เพื่อให้บุคคลทั้งหลาย หันมาใส่ใจดูแลเสริมสร้างสุขภาพและปรับเปลี่ยนพฤติกรรมด้านสุขภาพ จากข้อมูลสุขภาพต่างๆที่ได้รับจากเว็บไซต์แห่งนี้
-                    </p1>
-                </div>
+                    <h3 class="head-purpose">จุดประสงค์ของการทำโปรเจคนี้</h3>
+                    <div class="body-purpose">
+                        <p1>ปัจจุบันทั้งเด็กและผู้ใหญ่ส่วนมากมักจะมีปัญหาในเรื่องของสุขภาพ ไม่ว่าจะมาจากการใช้ชีวิตประจำวัน<br>
+                            การบริโภคอาหารให้ถูกต้องตรงตามหลักโภชนาการ  สิ่งเหล่านี้ล้วนแต่จะทำให้เกิดผลกระทบกับสุขภาพทั้งด้านดีและไม่ดี<br> 
+                            ที่อาจเห็นผลกระทบในเร็ววันหรืออนาคตก็ได้ ซึ่งก็ต้องขึ้นอยู่กับการใช้ชีวิตประจำวันและการบริโภคของแต่ละคน<br>
+                            ดังนั้นพวกเราจึงได้ศึกษาเกี่ยวกับเรื่องสุขภาพแล้ว นำมารวบรวมบนเว็บไซต์แห่งนี้ เพื่อให้บุคคลทั้งหลายหันมาใส่ใจ<br>
+                            ดูแลเสริมสร้างสุขภาพและปรับเปลี่ยนพฤติกรรมด้านสุขภาพ จากข้อมูลสุขภาพต่างๆที่ได้รับจากเว็บไซต์แห่งนี้
+                        </p1>
+                    </div>
+                <div class="graphic">
+                    <div id="chartContainer" style="height: 300px; width: 1200px;"></div>
+                    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+                    <a class="btn btn-primary" target="_blank" href="https://hdcservice.moph.go.th/hdc/reports/report_kpi.php?flag_kpi_level=1&flag_kpi_year=2018&source=pformated/format1.php&id=71cff4a5f828ddbe688784c2659abfe9">ดูเพิ่มเติม</a><br>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="graphic">
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-            <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-            <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-            <a class="btn btn-primary" target="_blank" href="https://hdcservice.moph.go.th/hdc/reports/report_kpi.php?flag_kpi_level=1&flag_kpi_year=2018&source=pformated/format1.php&id=71cff4a5f828ddbe688784c2659abfe9">ดูเพิ่มเติม</a><br>
-        </div>
-    </div>
     <div class="body">
         <br>
         <div class="container">
