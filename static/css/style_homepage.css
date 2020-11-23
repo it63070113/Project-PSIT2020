@@ -1,8 +1,7 @@
 body{
     font-family: 'Kanit', sans-serif;
     background-image: url("../img/background.jpg");
-    background-size: 1600px 1200px;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 .menubar{
@@ -54,4 +53,16 @@ h3.head-purpose{
     padding-top: 50px;
     margin: auto;
     width: 1200px;
+}
+h3.head-cal{
+    padding-top: 20px;
+    font-weight: 700;
+}
+.btn-calculator{
+    padding-top: 15px;
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+.health_diet{
+    font-weight: 700;
 }
