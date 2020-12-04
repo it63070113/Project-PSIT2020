@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style_homepage.css">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style_homepage.css')}}">
-    <title>Healthy Boys</title>
+    <link rel="shortcut icon" href="/static/img/icon.png" type="icon">
+    <title>PSIT Project - Healthy Boys</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -118,17 +119,16 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="menubar">
-        <a href="#" class="home">PSIT Project</a>
-        <a href="/home" class="first">Home</a>
-        <a href="/home#healthanddiet" class="second">Health & Diet</a>
-        <a href="/home#members" class="third">Members</a>
-    </div>
+    <ul class="menubar">
+        <li><a href="#" class="home">PSIT Project</a></li>
+        <li><a href="/home" class="first">About</a></li>
+        <li><a href="/home#healthanddiet" class="second">Health & Diet</a></li>
+        <li><a href="/home#members" class="third">Members</a></li>
+    </ul>
     <div class="brand"></div>
     <div class="purpose">
-        <h3 class="head-purpose">จุดประสงค์ของการทำโปรเจคนี้</h3>
+        <h4 class="head-purpose">จุดประสงค์ของการทำโปรเจคนี้</h4>
         <div class="body-purpose">
             <p1>ปัจจุบันทั้งเด็กและผู้ใหญ่ส่วนมากมักจะมีปัญหาในเรื่องของสุขภาพ ไม่ว่าจะมาจากการใช้ชีวิตประจำวัน<br> การบริโภคอาหารให้ถูกต้องตรงตามหลักโภชนาการ สิ่งเหล่านี้ล้วนแต่จะทำให้เกิดผลกระทบกับสุขภาพทั้งด้านดีและไม่ดี<br> ที่อาจเห็นผลกระทบในเร็ววันหรืออนาคตก็ได้
                 ซึ่งก็ต้องขึ้นอยู่กับการใช้ชีวิตประจำวันและการบริโภคของแต่ละคน
@@ -147,11 +147,21 @@
     </div>
     <div class="body">
         <div class="container">
-            <h3 class="head-cal">Calculators</h3>
-            <div class="btn-calculator">
-                <a class="btn bmi" style="background-color: white; padding: 10px;" href="/bmi">BMI เครื่องคำนวณดัชนีมวลร่างกาย</a>
-                <a class="btn bmr" style="background-color: white; padding: 10px;"href="/bmr">BMR เครื่องคำนวณการเผาผลาญพลังงานของร่างกาย</a>
-            </div>
+            <h4 class="head-cal">Calculators</h4>
+            <ul class="btn-calculator">
+                <li>
+                    <a class="button-bmi" href="/bmi">
+                        <img src="/static/img/calculator.png" class="calculator" style="width: 40px; padding-right: 10px;"></img>
+                            BMI เครื่องคำนวณหาค่าดัชนีมวลกาย
+                    </a>
+                </li>
+                <li>
+                    <a class="button-bmr" href="/bmr">
+                        <img src="/static/img/calculator.png" class="calculator" style="width: 40px; padding-right: 10px;"></img>
+                            BMR เครื่องคำนวณการเผาผลาญพลังงาน
+                        </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="news">
