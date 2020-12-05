@@ -2,7 +2,7 @@ body{
     font-family: 'Kanit', sans-serif;
     background-image: url("../img/background.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
 }
 ul.menubar{
     list-style: none;
@@ -57,7 +57,7 @@ a.first:hover, a.second:hover, a.third:hover{
 h4.head-purpose{
     text-align: center;
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: underline; 
     text-underline-position: under;
     padding-bottom: 20px;
 }
@@ -76,31 +76,57 @@ h4.head-purpose{
 }
 h4.head-cal{
     padding-top: 20px;
-    font-weight: 700;
+    padding-left: 200px;
+    font-size: 25px;
+    font-weight: 500;
 }
 ul.btn-calculator{
     list-style: none;
     padding-top: 15px;
-    padding-left: 100px;
+    padding-left: 300px;
     padding-bottom: 30px;
 }
-li a.button-bmi{
+li a.button-bmi, li a.button-bmr{
     font-size: 14px;
     color: black;
     padding: 15px 20px;
     border-radius: 15px;
-    background-color: white;
+    background-color: rgba(238, 238, 238, 0.795);
     text-decoration: none;
 }
 li a.button-bmr{
     margin-left: 100px;
+}
+li a.button-bmi:hover, li a.button-bmr:hover{
+    color: seagreen;
+}
+h3.health_diet{
+    padding-top: 40px;
+    padding-left: 200px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+li a.picture{
     font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 25px 20px;
+    background-color: #9cc89b;
     color: black;
+}
+.linknews{
+    padding-left: 250px;
+    padding-bottom: 400px;
+}
+.head-credit{
+    padding-left: 400px;
+    background-image: url(/static/img/background_credit.jpg);
+    background-size: inherit;
+    padding-bottom: 400px;
+}
+p.members{
+    font-size: 24px;
+    background-color: white;
     padding: 15px 20px;
     border-radius: 15px;
-    background-color: white;
-    text-decoration: none;
-}
-li a.health_diet{
-    font-weight: 700;
 }
