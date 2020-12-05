@@ -122,12 +122,12 @@
 <body>
     <ul class="menubar">
         <li><a href="#" class="home">PSIT Project</a></li>
-        <li><a href="/home" class="first">About</a></li>
+        <li><a href="/home#purpose" class="first">About</a></li>
         <li><a href="/home#healthanddiet" class="second">Health & Diet</a></li>
         <li><a href="/home#members" class="third">Members</a></li>
     </ul>
     <div class="brand"></div>
-    <div class="purpose">
+    <div class="purpose" id="purpose">
         <h4 class="head-purpose">จุดประสงค์ของการทำโปรเจคนี้</h4>
         <div class="body-purpose">
             <p1>ปัจจุบันทั้งเด็กและผู้ใหญ่ส่วนมากมักจะมีปัญหาในเรื่องของสุขภาพ ไม่ว่าจะมาจากการใช้ชีวิตประจำวัน<br> การบริโภคอาหารให้ถูกต้องตรงตามหลักโภชนาการ สิ่งเหล่านี้ล้วนแต่จะทำให้เกิดผลกระทบกับสุขภาพทั้งด้านดีและไม่ดี<br> ที่อาจเห็นผลกระทบในเร็ววันหรืออนาคตก็ได้
@@ -135,51 +135,55 @@
                 <br> ดังนั้นพวกเราจึงได้ศึกษาเกี่ยวกับเรื่องสุขภาพแล้ว นำมารวบรวมบนเว็บไซต์แห่งนี้ เพื่อให้บุคคลทั้งหลายหันมาใส่ใจ<br> ดูแลเสริมสร้างสุขภาพและปรับเปลี่ยนพฤติกรรมด้านสุขภาพ จากข้อมูลสุขภาพต่างๆที่ได้รับจากเว็บไซต์แห่งนี้
             </p1>
         </div>
-        <div class="graphic">
-            <div id="chartContainer" style="height: 300px; width: 1200px;"></div>
-            <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-            <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-            <br>
-        <div class="button-du">
-            <a class="btn btn-info" target="_blank" href="https://hdcservice.moph.go.th/hdc/reports/report_kpi.php?flag_kpi_level=1&flag_kpi_year=2018&source=pformated/format1.php&id=71cff4a5f828ddbe688784c2659abfe9">ดูเพิ่มเติม</a><br>
-        </div>
-        </div>
+            <div class="graphic">
+                    <div id="chartContainer" style="height: 300px; width: 1200px;"></div>
+                    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+                    <br>
+                <div class="button-du">
+                    <a class="btn btn-info" target="_blank" href="https://hdcservice.moph.go.th/hdc/reports/report_kpi.php?flag_kpi_level=1&flag_kpi_year=2018&source=pformated/format1.php&id=71cff4a5f828ddbe688784c2659abfe9">ดูเพิ่มเติม</a><br>
+                </div>
+            </div>
     </div>
-    <div class="body">
-        <div class="container">
-            <h4 class="head-cal">Calculators</h4>
-            <ul class="btn-calculator">
-                <li>
-                    <a class="button-bmi" href="/bmi">
-                        <img src="/static/img/calculator.png" class="calculator" style="width: 40px; padding-right: 10px;"></img>
-                            BMI เครื่องคำนวณหาค่าดัชนีมวลกาย
+    <h4 class="head-cal">Calculators</h4>
+        <ul class="btn-calculator">
+            <li>
+                <a class="button-bmi" href="/bmi">
+                    <img src="/static/img/calculator.png" style="width: 40px; padding-right: 10px;"></img>
+                        BMI เครื่องคำนวณหาค่าดัชนีมวลกาย
+                </a>
+            </li>
+            <li>
+                <a class="button-bmr" href="/bmr">
+                    <img src="/static/img/calculator.png" style="width: 40px; padding-right: 10px;"></img>
+                        BMR เครื่องคำนวณการเผาผลาญพลังงาน
+                    </a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="news">
+            <h3 class="health_diet" id="healthanddiet">Health & Diet</h3>
+            <div class="linknews">
+                <li style="list-style: none;">
+                    <a href="http://www.facebook.com" class="picture" style="padding-bottom: 100px;">
+                        <img src="/static/img/การวิ่งดี.jpg" style="width: 300px; padding-bottom: 20px;"></img><br>
+                        การวิ่งดีมีประโยชน์
+                    </a>
+                    <a href="http://www.facebook.com" class="picture" style="padding-bottom: 80px; margin-left: 50px;">
+                        <img src="/static/img/ช่องปาก.jpg" style="width: 300px; padding-bottom: 20px;"></img><br>
+                        ช่องปากนั้นสำคัญ ดูแลดีแบบครบวงจร<br>สุขภาพก็ดีด้วย
+                    </a>
+                    <a href="http://www.facebook.com" class="picture" style="padding-bottom: 80px; margin-left: 50px;">
+                        <img src="/static/img/ร้อนเบอร์นี้.jpg" style="width: 300px; padding-bottom: 20px;"></img><br>
+                        ช่องปากนั้นสำคัญ ดูแลดีแบบครบวงจร<br>สุขภาพก็ดีด้วย
                     </a>
                 </li>
-                <li>
-                    <a class="button-bmr" href="/bmr">
-                        <img src="/static/img/calculator.png" class="calculator" style="width: 40px; padding-right: 10px;"></img>
-                            BMR เครื่องคำนวณการเผาผลาญพลังงาน
-                        </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="news">
-        <div class="container">
-            <h3 class="health_diet">Health & Diet</h3>
-            <div class="linknews" id="healthanddiet">
-                <a href="http://www.facebook.com">เล่นโซเชียลยังไงให้หนุ่มตรึมมม</a>
-                <a href="http://www.google.com">อยากดูแลสุขภาพ ต้องค้นว่าอะไรรร</a>
-                <a href="http://www.instagram.com">แต่งรูปยังไง ให้ดูผอมมมมม</a>
             </div>
-        </div>
     </div>
-    </div>
-    </div>
-    <div class="container">
+    <div class="head-credit">
         <div class="credit">
-            <h3>project(re)tire members</h3>
-            <div class="member" id="members">
+            <p class="members" id="members" style="width: 200px; text-align: center;">MEMBERS</p>
                 <div class="number1">
                     <h6>นายปรัตถกร สิงห์วิเศษ (ดรอป)</h6>
                     <h6>63070101</h6>
@@ -200,7 +204,6 @@
                     <h6>นายอริยพล อูนากูล</h6>
                     <h6>63070186</h6>
                 </div>
-            </div>
         </div>
     </div>
 
