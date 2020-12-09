@@ -5,7 +5,7 @@ html {
 
 body {
   /*font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;*/
-  /*font-family: 'Work Sans', sans-serif;*/
+  font-family: 'Work Sans', sans-serif;
 }
 hr {
   max-width: 50px;
@@ -132,8 +132,7 @@ body {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-
-  background-image: url("../img/me/background_11.jpg");
+  background-image: url("../img/me/background_12.jpg");
   background-position: bottom;
     height: 100%;
     background-position: center;
@@ -167,7 +166,11 @@ header.masthead {
   @media (min-width: 1200px) {
     header.masthead h1 {
       font-size: 4rem; } }
-
+.item-content a{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
 .parallax { 
     color: white;
     /* The image used */
