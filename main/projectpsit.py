@@ -22,7 +22,7 @@ def mainnn():
 @app.route("/bmi", methods=['POST'])#process_bmi
 def bmi_cal():
     tips = ""
-    bmi_ans = "กรุณากรอกข้อมูล"
+    bmi_ans = "กรุณากรอกข้อมูลให้ถูกต้อง"
     kg_bmi = request.form['kg_bmi_input']
     height_bmi = request.form['height_bmi_input']
     if kg_bmi.isdigit() and height_bmi.isdigit():
@@ -60,7 +60,7 @@ def bmi_cal():
 
 @app.route("/bmr", methods=["POST"])#process_bmr
 def bmr_cal():
-    bmr_ans = "กรุณากรอกข้อมูล"
+    bmr_ans = "กรุณากรอกข้อมูลให้ถูกต้อง"
     ans = ""
     kg_bmr = request.form['kg_bmr_input']
     height_bmr = request.form['height_bmr_input']
